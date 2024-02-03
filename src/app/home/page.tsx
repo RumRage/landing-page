@@ -2,9 +2,9 @@ import "../../styles/globals.scss";
 
 export default function Home() {
   return (
-    <main>
+    <main className="background-container container">
       <div>
-        <h1>Hola!!!</h1>
+        <h1>Home</h1>
       </div>
     </main>
   );

@@ -4,9 +4,11 @@ import "../styles/globals.scss";
 
 //components
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 //pages
 import Home from "./home/page";
+import Work from "./work/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,8 @@ export default function RootLayout() {
       <body className={inter.className}>
         <Navbar />
         <Home />
+        <Work />
+        <Footer />
       </body>
     </html>
   );
