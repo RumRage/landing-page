@@ -5,6 +5,9 @@ import "../styles/globals.scss";
 //components
 import Navbar from "../components/Navbar";
 
+//pages
+import Home from "./home/page";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -12,16 +15,12 @@ export const metadata: Metadata = {
   description: "Clara Villarruel",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout() {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <Home />
       </body>
     </html>
   );
