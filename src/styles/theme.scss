@@ -5,9 +5,10 @@ $secondary_color: #000000;
 $accent-color: #795bd1;
 $search_color: #f25529;
 
-@mixin text_styling($font-size, $margin-bottom) {
+@mixin text_styling($font-size, $margin-bottom, $color) {
   font-size: $font-size;
   margin-bottom: $margin-bottom;
+  color: $color;
 }
 
 @mixin flex_container($direction, $justify, $align) {

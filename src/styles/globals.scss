@@ -10,7 +10,7 @@ body {
   color: $secondary_color;
 }
 
-.background_container {
+.background_color {
   background: $background_gradient no-repeat fixed;
   color: $primary_color;
 }
@@ -32,23 +32,56 @@ body {
     }
 
     .title {
-      @include text_styling(1.4rem, 10px);
+      @include text_styling(1.4rem, 10px, $primary_color);
     }
 
     .subtitle {
-      @include text_styling(0.8rem, 15px);
+      @include text_styling(0.8rem, 15px, $secondary_color);
       margin-top: 1.2rem;
-      color: $secondary_color;
       font-weight: normal;
       max-width: 85%;
     }
 
-    .title-info {
-      @include text_styling(0.7rem, 2px);
+    .list {
+      @include text_styling(0.7rem, 2px, $primary_color);
+      ol {
+        list-style-type: none;
+      }
     }
 
     .wrapper {
       @include flex_container(row, space-between, center);
+    }
+  }
+
+  .background_photo {
+    background-image: url("../../public/assets/background.png");
+    background-position: top;
+    background-size: fill;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding: 20px;
+
+    .title_work {
+      @include text_styling(1.6rem, 10px, $accent_color);
+      margin: 2rem 0;
+    }
+    .list {
+      @include text_styling(0.9rem, 20px, $accent_color);
+      padding-top: 1rem;
+      font-weight: bold;
+      ol {
+        list-style-type: none;
+
+        li {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
+    .title_image {
+      @include text_styling(1.2rem, 20px, $accent_color);
+      text-align: center;
     }
   }
 }

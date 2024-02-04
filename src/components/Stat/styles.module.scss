@@ -13,6 +13,6 @@
   p {
     max-width: 20%;
     padding: 2px;
-    @include text_styling(0.7rem, 2px);
+    @include text_styling(0.7rem, 2px, $primary_color);
   }
 }

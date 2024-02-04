@@ -6,7 +6,7 @@ import Stat from "@/components/Stat";
 
 export default function Home() {
   return (
-    <main className="background_container container">
+    <main className="background_color container">
       <div className="section">
         {/* SLIDER */}
         <div>
@@ -15,14 +15,16 @@ export default function Home() {
         {/* TEXT */}
         <div>
           <h1 className="title">Comunicación Inteligente</h1>
-          <h5 className="subtitle">
+          <p className="subtitle">
             Lleva la comunicación con tus clientes al siguiente nivel
             <b> todo-en-uno</b>
-          </h5>
-          <div className="title-info">
-            <p>&gt; Crea campañas de alto impacto</p>
-            <p>&gt; Gestiona las consultas omnicanal</p>
-            <p>&gt; Potencia tus chatbots corporativos.</p>
+          </p>
+          <div className="list">
+            <ol>
+              <li>&gt; Crea campañas de alto impacto</li>
+              <li>&gt; Gestiona las consultas omnicanal</li>
+              <li>&gt; Potencia tus chatbots corporativos.</li>
+            </ol>
           </div>
           <SearchButton />
           <div className="wrapper">
