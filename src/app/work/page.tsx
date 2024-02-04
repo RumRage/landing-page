@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "../../styles/globals.scss";
 import Link from "next/link";
+import Banner from "@/components/Banner";
 
 export default function Work() {
   return (
@@ -41,16 +42,16 @@ export default function Work() {
           <Image
             src="/assets/graph2.png"
             alt="Graph Mobile"
-            width={100}
-            height={500}
-            layout="responsive"
+            width={329}
+            height={777}
           />
-        </div>
-        <div className="container_bottom">
-          <div className="button_container">
-            <button className="info_button">Más información →</button>
+          <div className="container_bottom">
+            <div className="button_container">
+              <button className="info_button">Más información →</button>
+            </div>
           </div>
         </div>
+        <Banner />
       </div>
     </main>
   );

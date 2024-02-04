@@ -5,7 +5,6 @@ import "../styles/globals.scss";
 
 //components
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 //pages
 import Home from "./home/page";
@@ -22,12 +21,10 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* */}
+        {" "}
         <Navbar />
-
         <Home />
         <Work />
-        <Footer />
       </body>
     </html>
   );

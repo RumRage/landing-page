@@ -1,0 +1,12 @@
+@import "../../styles/theme.scss";
+
+.container {
+  background-image: url("../../../public/assets/banner.png");
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 100px;
+  margin: 0;
+  color: $primary-color;
+  @include flex_container(row, space-evenly, center);
+}
