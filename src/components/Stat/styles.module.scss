@@ -1,0 +1,18 @@
+@import "../../styles/theme.scss";
+
+.section {
+  @include flex_container(row, center, center);
+
+  margin-top: 2rem;
+
+  h1 {
+    margin-right: 0.5rem;
+    font-weight: normal;
+  }
+
+  p {
+    max-width: 20%;
+    padding: 2px;
+    @include text_styling(0.7rem, 2px);
+  }
+}

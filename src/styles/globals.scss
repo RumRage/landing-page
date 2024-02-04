@@ -1,13 +1,13 @@
 @import "./theme.scss";
 
-body {
-  color: $secondary_color;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  color: $secondary_color;
 }
 
 .background_container {
@@ -31,11 +31,11 @@ body {
       margin: 10px;
     }
 
-    h1 {
+    .title {
       @include text_styling(1.4rem, 10px);
     }
 
-    h5 {
+    .subtitle {
       @include text_styling(0.8rem, 15px);
       margin-top: 1.2rem;
       color: $secondary_color;
@@ -43,8 +43,12 @@ body {
       max-width: 85%;
     }
 
-    p {
+    .title-info {
       @include text_styling(0.7rem, 2px);
+    }
+
+    .wrapper {
+      @include flex_container(row, space-between, center);
     }
   }
 }
