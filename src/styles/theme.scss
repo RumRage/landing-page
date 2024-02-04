@@ -3,3 +3,8 @@ $background-gradient: linear-gradient(to right, #aa76ed, #5aa2f5, #00d4ff);
 $primary-color: #ffffff;
 $secondary-color: #000000;
 $navbar-color: #795bd1;
+
+@mixin text-styling($font-size, $margin-bottom) {
+  font-size: $font-size;
+  margin-bottom: $margin-bottom;
+}

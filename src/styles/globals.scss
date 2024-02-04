@@ -22,4 +22,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .section {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+
+    > div {
+      flex: 1;
+      margin: 10px;
+    }
+
+    h1 {
+      @include text-styling(1.4rem, 10px);
+    }
+
+    h5 {
+      @include text-styling(0.8rem, 15px);
+      margin-top: 1.2rem;
+      color: $secondary-color;
+      font-weight: normal;
+      max-width: 85%;
+    }
+
+    p {
+      @include text-styling(0.7rem, 2px);
+    }
+  }
 }
