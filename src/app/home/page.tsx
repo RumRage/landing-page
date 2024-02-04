@@ -5,7 +5,7 @@ import SearchButton from "@/components/SearchButton";
 
 export default function Home() {
   return (
-    <main className="background-container container">
+    <main className="background_container container">
       <div className="section">
         {/* SLIDER */}
         <div>

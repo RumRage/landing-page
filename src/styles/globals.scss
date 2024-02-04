@@ -1,7 +1,7 @@
 @import "./theme.scss";
 
 body {
-  color: $secondary-color;
+  color: $secondary_color;
 }
 
 * {
@@ -10,9 +10,9 @@ body {
   margin: 0;
 }
 
-.background-container {
-  background: $background-gradient no-repeat fixed;
-  color: $primary-color;
+.background_container {
+  background: $background_gradient no-repeat fixed;
+  color: $primary_color;
 }
 
 .container {
@@ -37,19 +37,19 @@ body {
     }
 
     h1 {
-      @include text-styling(1.4rem, 10px);
+      @include text_styling(1.4rem, 10px);
     }
 
     h5 {
-      @include text-styling(0.8rem, 15px);
+      @include text_styling(0.8rem, 15px);
       margin-top: 1.2rem;
-      color: $secondary-color;
+      color: $secondary_color;
       font-weight: normal;
       max-width: 85%;
     }
 
     p {
-      @include text-styling(0.7rem, 2px);
+      @include text_styling(0.7rem, 2px);
     }
   }
 }
