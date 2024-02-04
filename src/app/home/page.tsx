@@ -1,5 +1,8 @@
 import "../../styles/globals.scss";
 
+//Components
+import SearchButton from "@/components/SearchButton";
+
 export default function Home() {
   return (
     <main className="background-container container">
@@ -18,6 +21,7 @@ export default function Home() {
           <p>&gt; Crea campañas de alto impacto</p>
           <p>&gt; Gestiona las consultas omnicanal</p>
           <p>&gt; Potencia tus chatbots corporativos.</p>
+          <SearchButton />
         </div>
       </div>
     </main>
