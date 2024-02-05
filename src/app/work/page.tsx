@@ -1,13 +1,16 @@
 import Image from "next/image";
-import "../../styles/globals.scss";
 import Link from "next/link";
+import "../../styles/globals.scss";
+//Components
 import Banner from "@/components/Banner";
 
 export default function Work() {
   return (
-    <main className="container">
+    <main>
       <div className="second_section">
         {/* TEXT */}
+        <div className="background_nuts"></div>
+
         <h1 className="title_work">Funcionamiento</h1>
         <p className="subtitle">
           Envío de mensaje por Whatsapp, SMS o correo con enlace único. Muestra
@@ -22,6 +25,7 @@ export default function Work() {
             <li>&gt; Agentes Prediseñados para Atención Personalizada</li>
           </ol>
         </div>
+
         {/* IMAGE */}
         <div className="image_container">
           <h1 className="title_image">Manejado por agentes AI y humanos</h1>
