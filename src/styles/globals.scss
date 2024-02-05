@@ -27,15 +27,22 @@
     .text {
       margin-top: 2rem;
       .title {
-        @include text_styling($text_md, 0.625rem, $primary_color);
+        @include text_styling($text_lg, 0.625rem, $primary_color);
+        font-weight: normal;
+        padding-left: 0.5rem;
       }
 
       .subtitle {
-        @include text_styling($text_sm, 0.938rem, $secondary_color);
+        @include text_styling($text_sm, 0.938rem, $gray_light_color);
         margin: 1.6rem 0;
         font-weight: normal;
         max-width: 90%;
         padding-left: 1rem;
+
+        .black {
+          color: $gray_color;
+          font-weight: bold;
+        }
       }
 
       .list {
@@ -51,7 +58,7 @@
     }
 
     .stats {
-      @include flex_container(row, space-between, center);
+      @include flex_container(row, space-evenly, center);
     }
   }
 }
@@ -83,7 +90,7 @@
   }
 
   .list {
-    @include text_styling($text_sm, 20px, $accent_lighter_color);
+    @include text_styling($text_sm, 20px, $accent_medium);
     padding-top: 1rem;
     font-weight: bold;
     margin: 0 0 2rem 2rem;
