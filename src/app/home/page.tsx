@@ -2,6 +2,7 @@ import "../../styles/globals.scss";
 
 //Components
 import SearchButton from "@/components/SearchButton";
+import Slider from "@/components/Slider.jsx";
 import Stat from "@/components/Stat";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="section">
         {/* SLIDER */}
         <div className="slider">
-          <h1>Slider</h1>
+          <Slider />
         </div>
         {/* TEXT */}
         <div className="text">

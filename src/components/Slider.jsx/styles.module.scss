@@ -1,0 +1,23 @@
+@import "../../styles/theme.scss";
+
+.keen_slider {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    max-height: 50vh;
+  }
+}
