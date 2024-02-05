@@ -78,6 +78,7 @@ body {
   .title_work {
     @include text_styling($text_lg, 10px, $accent_color);
     margin: 0 0 2rem 2rem;
+    text-shadow: 2px 2px 4px rgba(36, 35, 35, 0.5);
   }
 
   .subtitle {
@@ -89,7 +90,7 @@ body {
   }
 
   .list {
-    @include text_styling($text_sm, 20px, $accent_color);
+    @include text_styling($text_sm, 20px, $accent_lighter_color);
     padding-top: 1rem;
     font-weight: bold;
     margin: 0 0 2rem 2rem;
@@ -99,6 +100,10 @@ body {
 
       li {
         padding-bottom: 1rem;
+        background-image: $accent_gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
