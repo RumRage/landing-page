@@ -26,7 +26,7 @@ export default function Home() {
               <li>&gt; Potencia tus chatbots corporativos.</li>
             </ol>
             <SearchButton />
-            <div className="wrapper">
+            <div className="stats">
               <Stat number_stat="+2943" title="Campañas Enviadas" />
               <Stat number_stat="+1M" title="Respuestas Instantáneas" />
             </div>

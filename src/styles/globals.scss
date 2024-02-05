@@ -25,7 +25,7 @@ body {
     @include flex_container(column, left, flex-start);
     padding: 20px;
 
-    .wrapper {
+    .stats {
       @include flex_container(row, space-between, center);
     }
   }
