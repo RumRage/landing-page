@@ -25,11 +25,11 @@ export default function Home() {
               <li>&gt; Gestiona las consultas omnicanal</li>
               <li>&gt; Potencia tus chatbots corporativos.</li>
             </ol>
-          </div>
-          <SearchButton />
-          <div className="wrapper">
-            <Stat number_stat="+2943" title="Campañas Enviadas" />
-            <Stat number_stat="+1M" title="Respuestas Instantáneas" />
+            <SearchButton />
+            <div className="wrapper">
+              <Stat number_stat="+2943" title="Campañas Enviadas" />
+              <Stat number_stat="+1M" title="Respuestas Instantáneas" />
+            </div>
           </div>
         </div>
       </div>

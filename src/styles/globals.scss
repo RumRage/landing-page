@@ -45,15 +45,17 @@ body {
 
     .subtitle {
       @include text_styling($text_sm, 15px, $secondary_color);
-      margin: 1.4rem 0;
+      margin: 1.6rem 0;
       font-weight: normal;
-      max-width: 85%;
+      max-width: 90%;
+      padding-left: 1rem;
     }
 
     .list {
       @include text_styling($text_xs, 2px, $primary_color);
       ol {
         list-style-type: none;
+        padding-top: 1rem;
       }
       li {
         padding: 0.2rem;
