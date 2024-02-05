@@ -49,8 +49,8 @@ export default function Work() {
             <div className="button_container">
               <button className="info_button">Más información →</button>
             </div>
+            <div className="second_background_nuts"></div>
           </div>
-          <div className="second_background_nuts"></div>
         </div>
 
         <Banner />
