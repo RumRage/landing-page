@@ -33,9 +33,5 @@
   height: 100%;
   border-radius: 50%;
   padding: 0.5rem;
-
-  //icono
-  svg {
-    fill: #000000;
-  }
+  color: $accent_color;
 }
