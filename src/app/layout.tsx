@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Barlow, Overpass } from "next/font/google";
+import { Barlow } from "next/font/google";
 
 import "../styles/globals.scss";
 
@@ -10,11 +10,7 @@ import Navbar from "../components/Navbar";
 import Home from "./home/page";
 import Work from "./work/page";
 
-const inter = Inter({ subsets: ["latin"] });
 const barlow = Barlow({ weight: ["400", "700"], subsets: ["latin"] });
-const overpass = Overpass({ weight: ["400", "700"], subsets: ["latin"] });
-
-export { inter, barlow, overpass };
 
 export const metadata: Metadata = {
   title: "Landing Page",
@@ -24,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={barlow.className}>
         {" "}
         <Navbar />
         <Home />

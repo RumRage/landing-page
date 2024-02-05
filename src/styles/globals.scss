@@ -40,7 +40,6 @@
         padding-left: 1rem;
 
         .black {
-          color: $gray_color;
           font-weight: bold;
         }
       }
@@ -139,10 +138,10 @@
   }
   .button_container {
     @include flex_container(column, center, center);
-    margin: 2rem;
+    margin: 2rem 0;
     .info_button {
       @include text_styling(0.8rem, 0, $primary_color);
-      background-color: $accent_color;
+      background: $main_gradient;
       cursor: pointer;
       padding: 0.6rem;
       border: none;
