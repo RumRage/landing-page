@@ -3,15 +3,15 @@
 .search {
   background-color: $primary-color;
   border-radius: 12px;
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
-  padding: 0.6rem;
 
   input {
     border: none;
     border-radius: 5px;
     flex: 1;
+    padding: 0.8rem 0;
   }
 
   button {

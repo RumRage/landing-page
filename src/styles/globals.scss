@@ -7,53 +7,61 @@
 }
 
 body {
-  color: $secondary_color;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.background_color {
-  background: $background_gradient no-repeat fixed;
-  color: $primary_color;
-}
-
-.container {
+.main_container {
+  @include flex_container(column, center, center);
+  background: $main_gradient no-repeat fixed;
   width: 100%;
   height: 100vh;
-  @include flex_container(column, center, center);
 
   .section {
+    color: $primary_color;
     width: 100%;
-    max-width: 800px;
-    @include flex_container(column, left, left);
+    height: 100%;
+    @include flex_container(column, left, flex-start);
     padding: 20px;
-
-    > div {
-      flex: 1;
-      margin: 10px;
-    }
-
-    .title {
-      @include text_styling(1.4rem, 10px, $primary_color);
-    }
-
-    .subtitle {
-      @include text_styling(0.8rem, 15px, $secondary_color);
-      margin-top: 1.2rem;
-      font-weight: normal;
-      max-width: 85%;
-    }
-
-    .list {
-      @include text_styling(0.7rem, 2px, $primary_color);
-      ol {
-        list-style-type: none;
-      }
-    }
 
     .wrapper {
       @include flex_container(row, space-between, center);
     }
   }
 
+  .slider {
+    color: $secondary_color;
+    flex: 1;
+  }
+
+  .text {
+    flex: 1;
+    margin-bottom: 0;
+
+    .title {
+      @include text_styling($text_lg, 10px, $primary_color);
+    }
+
+    .subtitle {
+      @include text_styling($text_sm, 15px, $secondary_color);
+      margin: 1.4rem 0;
+      font-weight: normal;
+      max-width: 85%;
+    }
+
+    .list {
+      @include text_styling($text_xs, 2px, $primary_color);
+      ol {
+        list-style-type: none;
+      }
+      li {
+        padding: 0.2rem;
+      }
+    }
+  }
+
+  /*
   .second_section {
     background-image: url("../../public/assets/background.png");
     background-position: top;
@@ -63,11 +71,11 @@ body {
     padding: 20px;
 
     .title_work {
-      @include text_styling(1.6rem, 10px, $accent_color);
+      @include text_styling($text_xl, 10px, $accent_color);
       margin: 2rem 0;
     }
     .list {
-      @include text_styling(0.9rem, 20px, $accent_color);
+      @include text_styling($text_sm, 20px, $accent_color);
       padding-top: 1rem;
       font-weight: bold;
       ol {
@@ -78,7 +86,7 @@ body {
         }
       }
     }
-
+    
     .image_container {
       position: relative;
       margin: 1rem 0;
@@ -135,4 +143,5 @@ body {
       }
     }
   }
+    */
 }

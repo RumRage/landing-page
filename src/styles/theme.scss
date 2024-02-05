@@ -1,9 +1,15 @@
-$background_gradient: linear-gradient(to right, #aa76ed, #5aa2f5, #00d4ff);
+$main_gradient: linear-gradient(to right, #aa76ed, #5aa2f5, #00d4ff);
 
 $primary_color: #ffffff;
 $secondary_color: #000000;
-$accent-color: #795bd1;
+$accent_color: #795bd1;
 $search_color: #f25529;
+
+$text_xs: 0.8rem;
+$text_sm: 1rem;
+$text_md: 1.4rem;
+$text_lg: 1.6rem;
+$text_xl: 1.8rem;
 
 @mixin text_styling($font-size, $margin-bottom, $color) {
   font-size: $font-size;

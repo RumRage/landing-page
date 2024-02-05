@@ -6,14 +6,14 @@ import Stat from "@/components/Stat";
 
 export default function Home() {
   return (
-    <main className="background_color container">
+    <main className="main_container">
       <div className="section">
         {/* SLIDER */}
-        <div>
+        <div className="slider">
           <h1>Slider</h1>
         </div>
         {/* TEXT */}
-        <div>
+        <div className="text">
           <h1 className="title">Comunicación Inteligente</h1>
           <p className="subtitle">
             Lleva la comunicación con tus clientes al siguiente nivel

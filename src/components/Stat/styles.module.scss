@@ -2,7 +2,6 @@
 
 .section {
   @include flex_container(row, center, center);
-
   margin-top: 2rem;
 
   h1 {
@@ -13,6 +12,6 @@
   p {
     max-width: 20%;
     padding: 2px;
-    @include text_styling(0.7rem, 2px, $primary_color);
+    @include text_styling(0.7rem, 0, $primary_color);
   }
 }
