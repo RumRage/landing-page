@@ -24,35 +24,35 @@ export default function Work() {
             </li>
             <li>&gt; Agentes Prediseñados para Atención Personalizada</li>
           </ol>
-        </div>
+          {/* IMAGE */}
+          <div className="image_section">
+            <h1 className="title_image">Manejado por agentes AI y humanos</h1>
+            <Image
+              src="/assets/agents.png"
+              alt="agents"
+              width={250}
+              height={200}
+            />
+            <Link href="#" className="link">
+              ...Ver Agentes
+            </Link>
+          </div>
+          <div className="image_graph">
+            <h1 className="secondary_title">Esquema</h1>
+            <Image
+              src="/assets/graph2.png"
+              alt="Graph Mobile"
+              width={329}
+              height={777}
+            />
 
-        {/* IMAGE */}
-        <div className="image_section">
-          <h1 className="title_image">Manejado por agentes AI y humanos</h1>
-          <Image
-            src="/assets/agents.png"
-            alt="agents"
-            width={250}
-            height={200}
-          />
-          <Link href="#" className="link">
-            ...Ver Agentes
-          </Link>
-        </div>
-        <div className="complete">
-          <h1 className="secondary_title">Esquema</h1>
-          <Image
-            src="/assets/graph2.png"
-            alt="Graph Mobile"
-            width={329}
-            height={777}
-          />
-          <div className="container_bottom">
             <div className="button_container">
               <button className="info_button">Más información →</button>
             </div>
           </div>
+          <div className="second_background_nuts"></div>
         </div>
+
         <Banner />
       </div>
     </main>

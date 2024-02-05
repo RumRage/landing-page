@@ -13,7 +13,7 @@ $text_xs: 1rem;
 $text_sm: 1.1rem;
 $text_md: 1.4rem;
 $text_lg: 1.8rem;
-$text_xl: 1.8rem;
+$text_xl: 2rem;
 
 @mixin text_styling($font-size, $margin-bottom, $color) {
   font-size: $font-size;

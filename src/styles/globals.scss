@@ -109,9 +109,7 @@ body {
   }
 
   .image_section {
-    margin: 1rem 0;
     @include flex_container(column, center, center);
-    position: relative;
 
     .title_image {
       @include text_styling(1.2rem, 2.5rem, $accent_light);
@@ -119,54 +117,46 @@ body {
     }
     .link {
       color: $search_color;
-      margin-top: auto;
-      position: absolute;
-      bottom: 0;
-      right: 0.2rem;
-      padding: 1rem 2rem 0 0;
+      margin-left: auto;
+      padding-right: 2rem;
+      font-size: 0.9rem;
     }
+  }
+  .image_graph {
+    position: relative;
+    margin-top: 2rem;
+  }
+  .image_graph .secondary_title {
+    @include text_styling($text_xl, 20px, transparent);
+    background-image: $accent_gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 2rem;
+    z-index: 2;
+  }
+  .button_container {
+    @include flex_container(column, center, center);
+    margin: 2rem;
+    .info_button {
+      @include text_styling(0.8rem, 0, $primary_color);
+      background-color: $accent_color;
+      cursor: pointer;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      flex: 1;
+    }
+  }
+  .second_background_nuts {
+    background-image: url("../../public/assets/background.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    flex: 1;
   }
 }
-
-/*
-    .image_container {
-      position: relative;       
-      
-      
-    }
-    .complete {
-      position: relative;
-      width: 100%;
-      height: 100%;
-
-      .secondary_title {
-        @include text_styling(1.2rem, 20px, $accent_color);
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-      }
-    }
-    .container_bottom {
-      background-image: url("../../public/assets/background.png");
-      background-position: bottom;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100px;
-      padding: 20px;
-      .button_container {
-        @include flex_container(column, center, center);
-
-        .info_button {
-          @include text_styling(0.8rem, 10px, $primary_color);
-          background-color: $accent_color;
-          cursor: pointer;
-          padding: 0.6rem;
-          border: none;
-          border-radius: 8px;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-    */
