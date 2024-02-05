@@ -27,16 +27,14 @@ export default function Work() {
         </div>
 
         {/* IMAGE */}
-        <div className="image_container">
+        <div className="image_section">
           <h1 className="title_image">Manejado por agentes AI y humanos</h1>
-          <div className="image_wrapper">
-            <Image
-              src="/assets/agents.png"
-              alt="agents"
-              width={250}
-              height={200}
-            />
-          </div>
+          <Image
+            src="/assets/agents.png"
+            alt="agents"
+            width={250}
+            height={200}
+          />
           <Link href="#" className="link">
             ...Ver Agentes
           </Link>
