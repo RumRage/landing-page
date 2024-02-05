@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Barlow } from "next/font/google";
 
 import "../styles/globals.scss";
 
@@ -11,6 +11,9 @@ import Home from "./home/page";
 import Work from "./work/page";
 
 const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({ weight: ["400", "700"], subsets: ["latin"] });
+
+export { inter, barlow };
 
 export const metadata: Metadata = {
   title: "Landing Page",
