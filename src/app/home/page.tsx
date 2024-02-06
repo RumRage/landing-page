@@ -9,7 +9,7 @@ import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
-    <main className="main_container">
+    <div className="home_container">
       <div className="section">
         {/* SLIDER */}
         <div className="slider">
@@ -38,6 +38,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
