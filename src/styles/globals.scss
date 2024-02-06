@@ -60,6 +60,52 @@
       @include flex_container(row, space-evenly, center);
     }
   }
+
+  @media only screen and (min-width: 768px) {
+    .section {
+      @include flex_container(row-reverse, space-evenly, center);
+      max-width: 100%;
+
+      .slider {
+        max-width: 50%;
+        height: 100%;
+      }
+
+      .text {
+        max-width: 50%;
+        height: 100%;
+        @include flex_container(column, flex-start, flex-start);
+        padding-left: 8rem;
+
+        .title {
+          @include text_styling(3.5rem, 0.625rem, $primary_color);
+          font-weight: 600;
+          max-width: 80%;
+        }
+
+        .subtitle {
+          @include text_styling(1.8rem, 0.938rem, $gray_light_color);
+          font-weight: normal;
+          max-width: 90%;
+
+          .black {
+            font-weight: bold;
+          }
+        }
+
+        .list {
+          @include text_styling($text_md, 2px, $primary_color);
+          ol {
+            list-style-type: none;
+            padding-top: 1rem;
+          }
+          li {
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 .second_section {

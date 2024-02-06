@@ -17,9 +17,10 @@ export default function Home() {
         </div>
         {/* TEXT */}
         <div className="text">
-          <h1 className="title">Comunicación Inteligente</h1>
+          <h1 className="title">Comunicación inteligente</h1>
           <p className="subtitle">
-            Lleva la comunicación con tus clientes al siguiente nivel
+            Lleva la comunicación con tus clientes <br />
+            al siguiente nivel
             <span className="black"> todo-en-uno</span>
           </p>
           <div className="list">
