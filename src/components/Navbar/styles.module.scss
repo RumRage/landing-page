@@ -2,9 +2,7 @@
 
 //component navbar
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex_container(row, space-between, center);
   padding: 1rem;
   background: $main_gradient;
   top: 0;

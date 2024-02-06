@@ -2,8 +2,8 @@ import "../../styles/globals.scss";
 
 //Components
 import SearchButton from "@/components/SearchButton";
-import Slider from "@/components/Slider.jsx";
-import Stat from "@/components/Stat";
+import Slider from "@/components/Slider";
+import Stats from "@/components/Stats";
 
 //Font
 
@@ -16,7 +16,7 @@ export default function Home() {
           <Slider />
         </div>
         {/* TEXT */}
-        <div className="text">
+        <div className="text_container">
           <h1 className="title">Comunicación inteligente</h1>
           <p className="subtitle">
             Lleva la comunicación con tus clientes <br />
@@ -29,10 +29,11 @@ export default function Home() {
               <li>&gt; Gestiona las consultas omnicanal</li>
               <li>&gt; Potencia tus chatbots corporativos.</li>
             </ol>
+          </div>
+          <div className="info">
             <SearchButton />
             <div className="stats">
-              <Stat number_stat="+2943" title="Campañas Enviadas" />
-              <Stat number_stat="+1M" title="Respuestas Instantáneas" />
+              <Stats />
             </div>
           </div>
         </div>
