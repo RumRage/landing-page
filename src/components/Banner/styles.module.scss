@@ -1,13 +1,22 @@
 @import "../../styles/theme.scss";
 
-.container {
+.background {
   background-image: url("../../../public/assets/banner.png");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 100px;
-  margin: 0;
-  font-weight: lighter;
-  color: $primary-color;
-  @include flex_container(row, space-evenly, center);
+  height: 4rem;
+  .container {
+    height: 100%;
+    font-weight: lighter;
+    color: $primary-color;
+    @include flex_container(row, space-evenly, center);
+  }
+
+  @media only screen and (min-width: 768px) {
+    height: 15vh;
+    .container {
+      font-size: 3rem;
+    }
+  }
 }
