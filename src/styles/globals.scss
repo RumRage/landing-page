@@ -118,7 +118,7 @@
   width: 100%;
   min-height: 85vh;
 
-  .background_nuts {
+  .top_background_nuts {
     background-image: url("../../public/assets/background.png");
     background-position: top;
     background-size: cover;
@@ -132,7 +132,7 @@
     gap: 1.2rem;
     margin: 0 2rem;
 
-    .first_section {
+    .text_section {
       @include flex_container(column, flex-start, flex-start);
       gap: 1.2rem;
       margin-top: -2.2rem;
@@ -168,11 +168,11 @@
       }
     }
 
-    .image_section {
+    .agents_section {
       @include flex_container(column, center, center);
       gap: 2rem;
 
-      .title_image {
+      .title_agents {
         @include text_styling(1.2rem, 0, $accent_light);
         text-align: center;
       }
@@ -182,49 +182,51 @@
         padding-right: 2rem 2rem 0 0;
         font-size: 0.9rem;
       }
-      .desktop_image {
+      .desktop_image_agents {
         display: none;
       }
-      .mobile_image {
+      .mobile_image_agents {
         display: block;
       }
     }
   }
 
-  .image_graph {
+  .image_section {
     position: relative;
-    margin-top: 2rem;
-  }
-  .image_graph .secondary_title {
-    @include text_styling($text_xl, 20px, transparent);
-    background-image: $accent_gradient;
-    -webkit-background-clip: text;
-    background-clip: text;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0 2rem;
-    z-index: 2;
+    margin-top: 3rem;
+    padding-left: 2rem;
+    .title {
+      position: absolute;
+      @include text_styling($text_xl, 0, transparent);
+      background-image: $accent_gradient;
+      -webkit-background-clip: text;
+      background-clip: text;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      margin-right: 2rem;
+    }
   }
   .button_container {
     @include flex_container(column, center, center);
-    margin: 2rem 0;
-    .info_button {
+    margin: 2rem 0 1rem 0;
+    button {
       @include text_styling(0.8rem, 0, $primary_color);
       background: $main_gradient;
       cursor: pointer;
-      padding: 0.6rem;
+      padding: 0.5rem;
       border: none;
       border-radius: 8px;
       font-weight: bold;
     }
   }
-  .second_background_nuts {
+  .bottom_background_nuts {
     background-image: url("../../public/assets/background.png");
-    background-position: bottom;
+    background-position: top;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100px;
-    margin-top: -4rem;
+    margin: -4rem 0 -2rem 0;
   }
 
   // Desktop Work
