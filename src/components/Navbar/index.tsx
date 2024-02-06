@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Image src="/icons/image 4.svg" alt="Logo" width={150} height={50} />
+        <Image src="/icons/image 4.svg" alt="Logo" width={183} height={36} />
       </div>
       <div>
         <button className={styles.menuButton}>
