@@ -20,32 +20,39 @@
     height: 100%;
 
     .text_container {
+      padding-top: 2rem;
       .title {
-        @include text_styling($text_lg, 0.625rem, $primary_color);
-        font-weight: normal;
+        @include text_styling(24px, 0.625rem, $primary_color);
+        line-height: 28.8px;
+        letter-spacing: 1.31px;
+        font-weight: 600;
         padding-left: 0.5rem;
       }
 
       .subtitle {
-        @include text_styling($text_sm, 0.938rem, $gray_light_color);
+        @include text_styling(15px, 0.938rem, $gray_light_color);
         margin: 1.6rem 0;
-        font-weight: normal;
+        font-weight: 400;
         max-width: 90%;
         padding-left: 1rem;
+        line-height: 16.97px;
 
         .black {
-          font-weight: bold;
+          font-weight: 700;
         }
       }
 
       .list {
-        @include text_styling($text_xs, 2px, $primary_color);
+        padding-left: 0.5rem;
         ol {
           list-style-type: none;
           padding-top: 1rem;
         }
         li {
-          padding: 0.2rem;
+          line-height: 16.97px;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 0.13px;
         }
       }
     }
@@ -70,28 +77,41 @@
         max-width: 50%;
         height: 100%;
         @include flex_container(column, flex-start, flex-start);
-        padding-left: 8rem;
+        padding-left: 12rem;
 
         .title {
-          font-size: 3.5rem;
-          font-weight: 500;
-          max-width: 80%;
+          letter-spacing: 2px;
+          font-size: 42px;
+          line-height: 50.4px;
+          font-weight: 600;
+          max-width: 50%;
+          padding-left: 0;
         }
 
         .subtitle {
-          font-size: 1.8rem;
+          font-size: 26px;
+          font-weight: 400;
+          max-width: 65%;
+          padding-left: 0;
+          line-height: 26px;
         }
 
         .list {
-          font-size: text_md;
           @include text_styling($text_md, 2px, $primary_color);
           ol {
             padding-top: 2rem;
             padding-bottom: 4rem;
+            li {
+              line-height: 26px;
+              font-size: 20px;
+              letter-spacing: 0.2px;
+            }
           }
         }
         .stats {
-          padding: 2rem 0;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
         }
       }
     }

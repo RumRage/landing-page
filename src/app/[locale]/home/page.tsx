@@ -26,7 +26,7 @@ export default function Home() {
           <div className="list">
             <ol>
               <li>&gt; {t("list_one")}</li>
-              <li>&gt;{t("list_two")} </li>
+              <li>&gt; {t("list_two")} </li>
               <li>&gt; {t("list_three")}</li>
             </ol>
           </div>

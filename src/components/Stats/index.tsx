@@ -11,7 +11,7 @@ const Stats = () => {
         <h1>+2943</h1>
         <p>{t("stat_one")} </p>
       </div>
-      <div className={styles.stat_two}>
+      <div className={styles.stat_one}>
         <h1>+1M</h1>
         <p>{t("stat_two")}</p>
       </div>

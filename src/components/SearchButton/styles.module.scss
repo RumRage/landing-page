@@ -8,6 +8,9 @@
   padding: 0.5rem;
 
   input {
+    font-size: 12px;
+    line-height: 16.97px;
+    font-weight: 400;
     border: none;
     border-radius: 5px;
     flex: 1;
@@ -18,18 +21,35 @@
     cursor: pointer;
     background-color: $search-color;
     color: $primary-color;
-    padding: 0.9rem 0.4rem;
-    border: none;
-    border-radius: 8px;
+    top: 579.54px;
+    left: 181.5px;
+    padding: 10.44px;
+    border: 0.65px;
+    border-radius: 6.53px;
     white-space: nowrap;
     font-weight: bold;
+    gap: 8.49px;
   }
 
   @media (min-width: 768px) {
-    padding: 0.7rem;
-    margin-right: 1rem;
+    gap: 13px;
+    padding: 17px, 16px, 17px, 25px;
+    input {
+      width: 227px;
+      height: 26px;
+      font-size: 14px;
+      font-weight: 400;
+    }
     button {
-      padding: 1rem 0.4rem;
+      top: 555px;
+      left: 388.55px;
+      border-radius: 10px;
+      padding: 16px;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 24px;
+      align-items: right;
+      font-weight: 700;
     }
   }
 }

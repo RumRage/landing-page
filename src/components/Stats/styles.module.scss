@@ -5,52 +5,42 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   .stat_one {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    h1 {
-      margin: 0.5rem;
-      font-weight: normal;
-    }
-
-    p {
-      max-width: 20%;
-      padding: 0.2rem;
-      @include text_styling(0.7rem, 0, $primary_color);
-    }
-  }
-
-  .stat_two {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+
     h1 {
-      margin: 0.5rem;
-      font-weight: normal;
+      font-size: 27.42px;
+      font-weight: 500;
+      line-height: 40.47px;
     }
 
     p {
+      font-weight: 500;
       max-width: 20%;
-      padding: 0.2rem;
-      @include text_styling(0.7rem, 0, $primary_color);
+      padding: 0.4rem;
+      @include text_styling(9.79px, 0, $primary_color);
     }
   }
 
   @media (min-width: 768px) {
-    h1 {
-      font-weight: 100;
-      font-size: 3rem;
-    }
+    .stat_one {
+      h1 {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 62px;
+      }
 
-    p {
-      max-width: 20%;
-      padding: 0.2rem;
-      @include text_styling(1.1rem, 0, $primary_color);
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        max-width: 20%;
+      }
     }
   }
 }
