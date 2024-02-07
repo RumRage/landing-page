@@ -4,7 +4,8 @@ import { useState } from "react";
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/navigation";
+import Link from "next/link";
+import { Link as CustomLink } from "@/navigation";
 import styles from "./styles.module.scss";
 import { FaBars } from "react-icons/fa";
 
@@ -84,14 +85,14 @@ const Navbar = () => {
                 </Link>
                 {changeLangDropdown && (
                   <div className={styles.dropdown_lang}>
-                    <Link
+                    <CustomLink
                       href="/"
                       locale="en"
                       className={styles.link}
                       onClick={() => changeLanguage("en")}
                     >
                       EN
-                    </Link>
+                    </CustomLink>
                   </div>
                 )}
               </>
@@ -102,14 +103,14 @@ const Navbar = () => {
                 </Link>
                 {changeLangDropdown && (
                   <div className={styles.dropdown_lang}>
-                    <Link
+                    <CustomLink
                       href="/"
                       locale="es"
                       className={styles.link}
                       onClick={() => changeLanguage("es")}
                     >
                       ES
-                    </Link>
+                    </CustomLink>
                   </div>
                 )}
               </>
