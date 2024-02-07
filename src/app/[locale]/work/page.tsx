@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import "../../styles/globals.scss";
+import "../../../styles/globals.scss";
 //Components
 import Banner from "@/components/Banner";
 
+import { useTranslations } from "next-intl";
+
 export default function Work() {
+  const t = useTranslations("Work");
   return (
     <div className="work_section">
       <div className="top_background_nuts"></div>
@@ -12,25 +15,19 @@ export default function Work() {
         {/* WORK */}
         <div className="container">
           <div className="text_section">
-            <h1 className="title_work">Funcionamiento</h1>
-            <p className="subtitle">
-              Envío de mensaje por Whatsapp, SMS o correo con enlace único.
-              Muestra vista previa y dirige a app web personalizada por
-              usuario/empresa
-            </p>
+            <h1 className="title_work">{t("title")}</h1>
+            <p className="subtitle">{t("subtitle")}</p>
             <div className="list">
               <ol>
-                <li>&gt; Envío individualizado de mensajes y enlaces</li>
-                <li>
-                  &gt; Previsualizaciones, Power App con Asistencia de Chatbot
-                </li>
-                <li>&gt; Agentes Prediseñados para Atención Personalizada</li>
+                <li>&gt; {t("list_one")}</li>
+                <li>&gt; {t("list_two")}</li>
+                <li>&gt; {t("list_three")}</li>
               </ol>
             </div>
           </div>
           {/* AGENTS */}
           <div className="agents_section">
-            <h1 className="title_agents">Manejado por agentes AI y humanos</h1>
+            <h1 className="title_agents">{t("agents")} </h1>
             {/* Mobile Image */}
             <Image
               src="/assets/agents.png"
@@ -49,7 +46,7 @@ export default function Work() {
               className="desktop_image_agents"
             />
             <Link href="#" className="link">
-              ...Ver Agentes
+              {t("link_agents")}
             </Link>
           </div>
         </div>
@@ -57,7 +54,7 @@ export default function Work() {
         {/* DIAGRAM */}
 
         <div className="image_section">
-          <h1 className="title">Esquema</h1>
+          <h1 className="title">{t("title_scheme")} </h1>
           {/* MOBILE IMAGE */}
           <Image
             src="/assets/graph2.png"
@@ -76,15 +73,11 @@ export default function Work() {
             className="desktop_image"
           />
           <div className="desktop_text">
-            <p>
-              Resuelve problemas, coordina eventos y rastrea las acciones del
-              usuario. Un chatbot guía las conversiones mientras un agente
-              humano supervisa en tiempo real.
-            </p>
+            <p>{t("text_scheme")}</p>
           </div>
 
           <div className="button_container">
-            <button>Más información →</button>
+            <button>{t("button")} → </button>
           </div>
         </div>
       </div>

@@ -1,0 +1,35 @@
+{
+  "Home": {
+    "title": "Intelligent Communication",
+    "subtitle": "Take the communication with your customers to the next level",
+    "subtitle_bold": "all-in-one",
+    "list_one": "Create high impact campaigns",
+    "list_two": "Manage omnichannel inquiries",
+    "list_three": "Power your corporate chatbots",
+    "placeholder_search": "Enter your email or your phone",
+    "search_button": "Contact me",
+    "stat_one": "Sent Campaigns",
+    "stat_two": "Instant Responses"
+  },
+  "Work": {
+    "title": "Functioning",
+    "subtitle": "Send a message via WhatsApp, SMS or email with a unique link that shows a preview and directs to a personalized web app for each user and company.",
+    "list_one": "Individualized sending of messages and links",
+    "list_two": "Previews, Power App with Chatbot Assistance",
+    "list_three": "Pre-designed Agents for Personalized Care",
+    "agents": "Managed by AI and human agents",
+    "link_agents": "...View Agents",
+    "title_scheme": "Scheme",
+    "text_scheme": "Solve problems, coordinate events, and track user actions. A chatbot guides conversions while a human agent monitors in real time",
+    "button": "More information",
+    "banner_one": "Time",
+    "banner_two": "Platform",
+    "banner_three": "Conversions"
+  },
+  "Navbar": {
+    "item_one": "Products",
+    "item_two": "Pricing",
+    "item_three": "Documentation",
+    "agents": "Speak with an advisor"
+  }
+}

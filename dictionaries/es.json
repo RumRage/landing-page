@@ -1,0 +1,35 @@
+{
+  "Home": {
+    "title": "Comunicación inteligente",
+    "subtitle": "Lleva la comunicación con tus clientes al siguiente nivel",
+    "subtitle_bold": "todo-en-uno",
+    "list_one": "Crea campañas de alto impacto",
+    "list_two": "Gestiona las consultas omnicanal",
+    "list_three": "Potencia tus chatbots corporativos.",
+    "placeholder_search": "Ingresa tu email o teléfono",
+    "search_button": "Quiero que me contacten",
+    "stat_one": "Campañas Enviadas",
+    "stat_two": "Respuestas Instantáneas"
+  },
+  "Work": {
+    "title": "Funcionamiento",
+    "subtitle": "Envío de mensaje por Whatsapp, SMS o correo con enlace único que muestra una vista previa y dirige a una app web personalizada para cada usuario y empresa",
+    "list_one": "Envío individualizado de mensajes y enlaces",
+    "list_two": "Previsualizaciones, Power App con Asistencia de Chatbot",
+    "list_three": "Agentes Prediseñados para Atención Personalizada.",
+    "agents": "Manejado por agentes AI y humanos",
+    "link_agents": "...Ver Agentes",
+    "title_scheme": "Esquema",
+    "text_scheme": " Resuelve problemas, coordina eventos y rastrea las acciones delusuario. Un chatbot guía las conversiones mientras un agentehumano supervisa en tiempo real.",
+    "button": "Más información",
+    "banner_one": "Tiempo",
+    "banner_two": "Plataforma",
+    "banner_three": "Conversiones"
+  },
+  "Navbar": {
+    "item_one": "Productos",
+    "item_two": "Pricing",
+    "item_three": "Documentación",
+    "agents": "Hablar con un asesor"
+  }
+}

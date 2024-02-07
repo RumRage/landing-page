@@ -1,17 +1,33 @@
 "use client";
 
 import { useState } from "react";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import styles from "./styles.module.scss";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [changeLangDropdown, setChangeLangDropdown] = useState(false);
+
+  const [currentLanguage, setCurrentLanguage] = useState("es");
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
+  const toggleLanguage = () => {
+    setChangeLangDropdown(!changeLangDropdown);
+  };
+
+  const changeLanguage = (lang: string) => {
+    setCurrentLanguage(lang);
+    setChangeLangDropdown(false);
+  };
+
+  const t = useTranslations("Navbar");
 
   return (
     <nav className={styles.navbar}>
@@ -42,7 +58,7 @@ const Navbar = () => {
         </div>
         <div className={styles.nav_group}>
           <div onClick={toggleDropdown} className={styles.dropdown}>
-            Productos ▼
+            {t("item_one")} ▼
             {dropdownOpen && (
               <div className={styles.dropdown_content}>
                 <Link href="/">Chatbots</Link>
@@ -52,15 +68,53 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/">Pricing</Link>
-          <Link href="/">Documentación</Link>
+          <Link href="/">{t("item_two")} </Link>
+          <Link href="/">{t("item_three")} </Link>
         </div>
         <div className={styles.nav_about}>
-          <Link href="/">Hablar con un asesor</Link>
+          <Link href="/">{t("agents")} </Link>
           <button className={styles.button_notimation}>
             Notimation Entreprice
           </button>
-          <button className={styles.button_languaje}>ES</button>
+          <div onClick={toggleLanguage} className={styles.dropdown}>
+            {currentLanguage === "es" ? (
+              <>
+                <Link href="/" className={styles.link}>
+                  ES
+                </Link>
+                {changeLangDropdown && (
+                  <div className={styles.dropdown_lang}>
+                    <Link
+                      href="/"
+                      locale="en"
+                      className={styles.link}
+                      onClick={() => changeLanguage("en")}
+                    >
+                      EN
+                    </Link>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <Link href="/" className={styles.link}>
+                  EN
+                </Link>
+                {changeLangDropdown && (
+                  <div className={styles.dropdown_lang}>
+                    <Link
+                      href="/"
+                      locale="es"
+                      className={styles.link}
+                      onClick={() => changeLanguage("es")}
+                    >
+                      ES
+                    </Link>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>

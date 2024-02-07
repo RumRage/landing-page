@@ -1,13 +1,14 @@
-import "../../styles/globals.scss";
+import "../../../styles/globals.scss";
 
 //Components
 import SearchButton from "@/components/SearchButton";
 import Slider from "@/components/Slider";
 import Stats from "@/components/Stats";
 
-//Font
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
   return (
     <div className="home_container">
       <div className="section">
@@ -17,17 +18,16 @@ export default function Home() {
         </div>
         {/* TEXT */}
         <div className="text_container">
-          <h1 className="title">Comunicación inteligente</h1>
+          <h1 className="title">{t("title")}</h1>
           <p className="subtitle">
-            Lleva la comunicación con tus clientes <br />
-            al siguiente nivel
-            <span className="black"> todo-en-uno</span>
+            {t("subtitle")}
+            <span className="black"> {t("subtitle_bold")}</span>
           </p>
           <div className="list">
             <ol>
-              <li>&gt; Crea campañas de alto impacto</li>
-              <li>&gt; Gestiona las consultas omnicanal</li>
-              <li>&gt; Potencia tus chatbots corporativos.</li>
+              <li>&gt; {t("list_one")}</li>
+              <li>&gt;{t("list_two")} </li>
+              <li>&gt; {t("list_three")}</li>
             </ol>
           </div>
           <div className="info">

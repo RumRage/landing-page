@@ -83,6 +83,31 @@
         }
       }
     }
+    .dropdown_lang {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      max-width: 100%;
+      background-color: white;
+      border: 3px solid $accent_gradient;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 0.4rem;
+      z-index: 1;
+      margin-top: 1rem;
+
+      .link {
+        color: $accent_medium;
+        text-decoration: none;
+        margin: 0.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .link:hover {
+        color: $accent_color;
+      }
+    }
 
     .nav_about {
       display: flex;
@@ -135,4 +160,29 @@
       }
     }
   }
+}
+
+.logo {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.menuIcon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: $accent_color;
 }
