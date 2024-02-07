@@ -12,16 +12,12 @@
   width: 100%;
   min-height: 85vh;
   padding: 0 2rem;
+  gap: 2;
 
   .section {
     color: $primary_color;
     width: 100%;
     height: 100%;
-
-    .slider {
-      color: $secondary_color;
-      // margin: 0 -1rem;
-    }
 
     .text_container {
       .title {
@@ -77,31 +73,21 @@
         padding-left: 8rem;
 
         .title {
-          @include text_styling(3.5rem, 0.625rem, $primary_color);
+          font-size: 3.5rem;
           font-weight: 500;
           max-width: 80%;
-          margin-bottom: auto;
         }
 
         .subtitle {
-          @include text_styling(1.8rem, 0.938rem, $gray_light_color);
-          font-weight: normal;
-          max-width: 90%;
-
-          .black {
-            font-weight: bold;
-          }
+          font-size: 1.8rem;
         }
 
         .list {
+          font-size: text_md;
           @include text_styling($text_md, 2px, $primary_color);
           ol {
-            list-style-type: none;
             padding-top: 2rem;
             padding-bottom: 4rem;
-          }
-          li {
-            padding: 0.2rem;
           }
         }
         .stats {
@@ -126,98 +112,194 @@
     height: 100px;
     transform: scaleY(-1);
   }
-
-  .container {
+  .section {
     @include flex_container(column, center, center);
-    gap: 1.2rem;
-    margin: 0 2rem;
+    gap: 2;
 
-    .text_section {
-      @include flex_container(column, flex-start, flex-start);
+    .container {
+      @include flex_container(column, center, center);
       gap: 1.2rem;
-      margin-top: -2.2rem;
+      margin: 0 2rem;
 
-      .title_work {
-        @include text_styling($text_lg, 10px, $accent_color);
-        text-shadow: 2px 2px 4px rgba(36, 35, 35, 0.5);
-      }
+      .text_section {
+        @include flex_container(column, flex-start, flex-start);
+        gap: 1.2rem;
+        margin-top: -2.2rem;
 
-      .subtitle {
-        @include text_styling($text_xxs, 15px, $secondary_color);
-        font-weight: normal;
+        .title_work {
+          @include text_styling($text_lg, 10px, transparent);
+          background-image: $accent_gradient;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
 
-        line-height: 1.6;
-      }
-      .list {
-        @include text_styling($text_sm, 20px, $accent_medium);
+        .subtitle {
+          @include text_styling($text_xxs, 15px, $secondary_color);
+          font-weight: normal;
+          line-height: 1.6;
+        }
+        .list {
+          @include text_styling($text_xs, 20px, $accent_medium);
+          font-weight: bold;
+          line-height: 2;
+          ol {
+            list-style-type: none;
 
-        font-weight: bold;
-
-        line-height: 2;
-        ol {
-          list-style-type: none;
-
-          li {
-            padding-bottom: 1rem;
-            background-image: $accent_gradient;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            li {
+              padding-bottom: 1rem;
+              background-image: $list_gradient;
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+            }
           }
         }
       }
+      .agents_section {
+        @include flex_container(column, center, center);
+        gap: 2rem;
+
+        .title_agents {
+          @include text_styling(1.2rem, 0, $accent_light);
+          text-align: center;
+        }
+        .link {
+          color: $search_color;
+          margin-left: auto;
+          padding-right: 2rem 2rem 0 0;
+          font-size: 0.9rem;
+        }
+        .desktop_image_agents {
+          display: none;
+        }
+        .mobile_image_agents {
+          display: block;
+        }
+      }
     }
+    .image_section {
+      position: relative;
+      margin-top: 3rem;
+      padding-left: 2rem;
 
-    .agents_section {
-      @include flex_container(column, center, center);
-      gap: 2rem;
-
-      .title_agents {
-        @include text_styling(1.2rem, 0, $accent_light);
-        text-align: center;
-      }
-      .link {
-        color: $search_color;
-        margin-left: auto;
-        padding-right: 2rem 2rem 0 0;
-        font-size: 0.9rem;
-      }
-      .desktop_image_agents {
+      .desktop_image {
         display: none;
       }
-      .mobile_image_agents {
+      .mobile_image {
         display: block;
       }
-    }
-  }
-
-  .image_section {
-    position: relative;
-    margin-top: 3rem;
-    padding-left: 2rem;
-    .title {
-      position: absolute;
-      @include text_styling($text_xl, 0, transparent);
-      background-image: $accent_gradient;
-      -webkit-background-clip: text;
-      background-clip: text;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      margin-right: 2rem;
+      .title {
+        position: absolute;
+        @include text_styling($text_xl, 0, transparent);
+        background-image: $accent_gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        margin-right: 2rem;
+      }
+      .desktop_text {
+        display: none;
+      }
     }
   }
   .button_container {
     @include flex_container(column, center, center);
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 -1rem 0;
     button {
       @include text_styling(0.8rem, 0, $primary_color);
       background: $main_gradient;
       cursor: pointer;
-      padding: 0.5rem;
+      padding: 0.8rem;
       border: none;
       border-radius: 8px;
       font-weight: bold;
+    }
+  }
+
+  .bottom_background_nuts {
+    background-image: url("../../public/assets/background.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin-top: -4rem;
+  }
+
+  // Desktop Work
+  @media only screen and (min-width: 768px) {
+    min-height: 100vh;
+    .section {
+      @include flex_container(column, center, center);
+      .container {
+        @include flex_container(row, space-between, center);
+        margin: 0 15rem;
+
+        .text_section {
+          gap: 2rem;
+
+          .title_work {
+            font-size: 2.3rem;
+            margin-top: -2rem;
+          }
+
+          .subtitle {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 30.86px;
+            width: 65%;
+          }
+          .list {
+            @include text_styling($text_md, 20px, $accent_medium);
+            line-height: 2;
+          }
+        }
+        .agents_section {
+          .title_agents {
+            font-size: 2rem;
+          }
+          .link {
+            padding-left: 10rem;
+          }
+          .mobile_image_agents {
+            display: none;
+          }
+          .desktop_image_agents {
+            display: block;
+          }
+        }
+      }
+      .image_section {
+        .desktop_image {
+          display: block;
+        }
+        .mobile_image {
+          display: none;
+        }
+        .title {
+          font-size: 2.3rem;
+          background-image: $gray_gradient;
+          left: 0;
+        }
+        .desktop_text {
+          display: block;
+          position: absolute;
+          text-align: right;
+          width: 40%;
+          right: 3%;
+          bottom: 15%;
+
+          p {
+            @include text_styling(22px, 15px, $secondary_color);
+            font-weight: 400;
+            line-height: 30.86px;
+          }
+        }
+      }
+      .button_container {
+        align-items: flex-start;
+      }
     }
   }
   .bottom_background_nuts {
@@ -226,64 +308,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100px;
-    margin: -4rem 0 -2rem 0;
-  }
-
-  // Desktop Work
-  @media only screen and (min-width: 768px) {
-    min-height: 100vh;
-    .container {
-      @include flex_container(row, space-between, center);
-      margin: 0 15rem;
-
-      .first_section {
-        gap: 2rem;
-
-        .title_work {
-          @include text_styling(2.5rem, 10px, $accent_color);
-          text-shadow: 2px 2px 4px rgba(36, 35, 35, 0.5);
-          margin-top: -2rem;
-        }
-
-        .subtitle {
-          @include text_styling(1.8rem, 15px, $secondary_color);
-          font-weight: normal;
-          width: 75%;
-          line-height: 1.6;
-        }
-        .list {
-          @include text_styling($text_md, 20px, $accent_medium);
-
-          font-weight: bold;
-
-          line-height: 2;
-          ol {
-            list-style-type: none;
-
-            li {
-              padding-bottom: 1rem;
-              background-image: $accent_gradient;
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-            }
-          }
-        }
-      }
-      .image_section {
-        .title_image {
-          @include text_styling(2rem, 0, $accent_light);
-        }
-        .link {
-          padding-left: 10rem;
-        }
-        .mobile_image {
-          display: none;
-        }
-        .desktop_image {
-          display: block;
-        }
-      }
-    }
+    margin: -1rem 0 0 0;
   }
 }

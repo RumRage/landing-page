@@ -8,65 +8,87 @@ export default function Work() {
   return (
     <div className="work_section">
       <div className="top_background_nuts"></div>
-      {/* WORK */}
-      <div className="container">
-        <div className="text_section">
-          <h1 className="title_work">Funcionamiento</h1>
-          <p className="subtitle">
-            Envío de mensaje por Whatsapp, SMS o correo con enlace único.
-            Muestra vista previa y dirige a app web personalizada por
-            usuario/empresa
-          </p>
-          <div className="list">
-            <ol>
-              <li>&gt; Envío individualizado de mensajes y enlaces</li>
-              <li>
-                &gt; Previsualizaciones, Power App con Asistencia de Chatbot
-              </li>
-              <li>&gt; Agentes Prediseñados para Atención Personalizada</li>
-            </ol>
+      <div className="section">
+        {/* WORK */}
+        <div className="container">
+          <div className="text_section">
+            <h1 className="title_work">Funcionamiento</h1>
+            <p className="subtitle">
+              Envío de mensaje por Whatsapp, SMS o correo con enlace único.
+              Muestra vista previa y dirige a app web personalizada por
+              usuario/empresa
+            </p>
+            <div className="list">
+              <ol>
+                <li>&gt; Envío individualizado de mensajes y enlaces</li>
+                <li>
+                  &gt; Previsualizaciones, Power App con Asistencia de Chatbot
+                </li>
+                <li>&gt; Agentes Prediseñados para Atención Personalizada</li>
+              </ol>
+            </div>
+          </div>
+          {/* AGENTS */}
+          <div className="agents_section">
+            <h1 className="title_agents">Manejado por agentes AI y humanos</h1>
+            {/* Mobile Image */}
+            <Image
+              src="/assets/agents.png"
+              alt="Agents"
+              width={202}
+              height={155}
+              className="mobile_image_agents"
+            />
+
+            {/* Desktop Image */}
+            <Image
+              src="/assets/agents.png"
+              alt="Agents"
+              width={350}
+              height={270}
+              className="desktop_image_agents"
+            />
+            <Link href="#" className="link">
+              ...Ver Agentes
+            </Link>
           </div>
         </div>
-        {/* AGENTS */}
-        <div className="agents_section">
-          <h1 className="title_agents">Manejado por agentes AI y humanos</h1>
-          {/* Mobile Image */}
+
+        {/* DIAGRAM */}
+
+        <div className="image_section">
+          <h1 className="title">Esquema</h1>
+          {/* MOBILE IMAGE */}
           <Image
-            src="/assets/agents.png"
-            alt="Agents"
-            width={202}
-            height={155}
-            className="mobile_image_agents"
+            src="/assets/graph2.png"
+            alt="Graph Mobile"
+            width={329}
+            height={777}
+            className="mobile_image"
           />
 
-          {/* Desktop Image */}
+          {/* DESKTOP IMAGE */}
           <Image
-            src="/assets/agents.png"
-            alt="Agents"
-            width={350}
-            height={270}
-            className="desktop_image_agents"
+            src="/assets/graph.png"
+            alt="Graph Desktop"
+            width={1308}
+            height={706}
+            className="desktop_image"
           />
-          <Link href="#" className="link">
-            ...Ver Agentes
-          </Link>
+          <div className="desktop_text">
+            <p>
+              Resuelve problemas, coordina eventos y rastrea las acciones del
+              usuario. Un chatbot guía las conversiones mientras un agente
+              humano supervisa en tiempo real.
+            </p>
+          </div>
+
+          <div className="button_container">
+            <button>Más información →</button>
+          </div>
         </div>
       </div>
 
-      {/* DIAGRAM */}
-
-      <div className="image_section">
-        <h1 className="title">Esquema</h1>
-        <Image
-          src="/assets/graph2.png"
-          alt="Graph Mobile"
-          width={329}
-          height={777}
-        />
-      </div>
-      <div className="button_container">
-        <button>Más información →</button>
-      </div>
       <div className="bottom_background_nuts"> </div>
 
       <Banner />
