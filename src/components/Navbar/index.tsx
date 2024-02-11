@@ -1,13 +1,16 @@
 "use client";
-
 import { useState } from "react";
-
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Link as CustomLink } from "@/navigation";
+// INTL
+import { useTranslations } from "next-intl";
+//Styles
 import styles from "./styles.module.scss";
+//Icons
 import { FaBars } from "react-icons/fa";
+//Images
+import logo from "@/../../public/icons/image 4.svg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -36,7 +39,7 @@ const Navbar = () => {
 
       <div className={styles.mobile_navbar}>
         <div className={styles.logo}>
-          <Image src="/icons/image 4.svg" alt="Logo" width={183} height={36} />
+          <Image src={logo} alt="Logo" width={183} height={36} />
         </div>
         <div>
           <button className={styles.menuButton}>
@@ -49,12 +52,7 @@ const Navbar = () => {
       <div className={styles.desktop_navbar}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image
-              src="/icons/image 4.svg"
-              alt="Logo"
-              width={183}
-              height={36}
-            />
+            <Image src={logo} alt="Logo" width={183} height={36} />
           </Link>
         </div>
         <div className={styles.nav_group}>

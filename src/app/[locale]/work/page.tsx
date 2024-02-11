@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 import "../../../styles/globals.scss";
 //Components
 import Banner from "@/components/Banner";
 
-import { useTranslations } from "next-intl";
+//Images
+import agents from "@/../../public/assets/agents.png";
+import graph from "@/../../public/assets/graph.png";
+import graph2 from "@/../../public/assets/graph2.png";
 
 export default function Work() {
   const t = useTranslations("Work");
@@ -30,7 +35,7 @@ export default function Work() {
             <h1 className="title_agents">{t("agents")} </h1>
             {/* Mobile Image */}
             <Image
-              src="/assets/agents.png"
+              src={agents}
               alt="Agents"
               width={202}
               height={155}
@@ -39,7 +44,7 @@ export default function Work() {
 
             {/* Desktop Image */}
             <Image
-              src="/assets/agents.png"
+              src={agents}
               alt="Agents"
               width={350}
               height={270}
@@ -57,7 +62,7 @@ export default function Work() {
           <h1 className="title">{t("title_scheme")} </h1>
           {/* MOBILE IMAGE */}
           <Image
-            src="/assets/graph2.png"
+            src={graph2}
             alt="Graph Mobile"
             width={329}
             height={777}
@@ -66,7 +71,7 @@ export default function Work() {
 
           {/* DESKTOP IMAGE */}
           <Image
-            src="/assets/graph.png"
+            src={graph}
             alt="Graph Desktop"
             width={1308}
             height={706}
