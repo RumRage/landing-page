@@ -8,20 +8,20 @@
   height: 4rem;
   .container {
     height: 100%;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 16.8px;
+    @include text_styling(14px, 300, 16.8px, $primary-color);
     text-align: center;
-    color: $primary-color;
     @include flex_container(row, space-evenly, center);
   }
+}
 
-  @media only screen and (min-width: 768px) {
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+  .background {
     height: 15vh;
-    .container {
-      font-size: 52px;
-      font-weight: 300;
-      line-height: 62.4px;
-    }
+  }
+  .background .container {
+    font-size: 60px;
+    line-height: 62.4px;
   }
 }

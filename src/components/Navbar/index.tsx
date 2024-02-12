@@ -28,7 +28,7 @@ const Navbar = () => {
 
       <div className={styles.mobile_navbar}>
         <div className={styles.logo}>
-          <Image src={logo} alt="Logo" width={183} height={36} />
+          <Image src={logo} alt="Logo" width={172} height={34} />
         </div>
         <div>
           <button className={styles.menuButton}>

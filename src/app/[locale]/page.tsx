@@ -1,12 +1,9 @@
-import LocaleLayout from "./layout";
-import Home from "./home/page";
-import Work from "./work/page";
+import Home from "@/routes/Home";
 
 export default function Landing() {
   return (
     <main>
       <Home />
-      <Work />
     </main>
   );
 }

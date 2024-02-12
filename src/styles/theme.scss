@@ -10,7 +10,7 @@ $secondary_color: #000000;
 $accent_color: #4518cd;
 $accent_medium: #765df1;
 $accent_light: #6a9cff;
-
+$grey: #878787;
 $gray_color: #1c437d;
 $gray_light_color: #412c86;
 $search_color: #ff5722;
@@ -22,9 +22,10 @@ $text_md: 1.4rem;
 $text_lg: 1.8rem;
 $text_xl: 2rem;
 
-@mixin text_styling($font-size, $margin-bottom, $color) {
+@mixin text_styling($font-size, $font-weight, $line-height, $color) {
   font-size: $font-size;
-  margin-bottom: $margin-bottom;
+  font-weight: $font-weight;
+  line-height: $line-height;
   color: $color;
 }
 

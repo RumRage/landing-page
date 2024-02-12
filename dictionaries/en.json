@@ -1,17 +1,15 @@
 {
   "Home": {
-    "title": "Intelligent Communication",
-    "subtitle": "Take the communication with your customers to the next level",
+    "home_title": "Intelligent Communication",
+    "home_subtitle": "Take the communication with your customers to the next level",
     "subtitle_bold": "all-in-one",
-    "list_one": "Create high impact campaigns",
-    "list_two": "Manage omnichannel inquiries",
-    "list_three": "Power your corporate chatbots",
+    "home_list_one": "Create high impact campaigns",
+    "home_list_two": "Manage omnichannel inquiries",
+    "home_list_three": "Power your corporate chatbots",
     "placeholder_search": "Enter your email or your phone",
     "search_button": "Contact me",
     "stat_one": "Sent Campaigns",
-    "stat_two": "Instant Responses"
-  },
-  "Work": {
+    "stat_two": "Instant Responses",
     "title": "Functioning",
     "subtitle": "Send a message via WhatsApp, SMS or email with a unique link that shows a preview and directs to a personalized web app for each user and company.",
     "list_one": "Individualized sending of messages and links",
