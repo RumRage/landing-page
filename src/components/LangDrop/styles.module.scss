@@ -2,32 +2,27 @@
 
 .dropdown {
   @include dropdown;
-
-  &:hover {
-    color: $accent_color;
-  }
-  .dropdown_lang {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    max-width: 100%;
-    background-color: white;
-    border: 3px solid $accent_gradient;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0.4rem;
-    z-index: 1;
-    margin-top: 1rem;
-
-    .link {
-      color: $accent_medium;
-      text-decoration: none;
-      margin: 0.5rem;
-      transition: color 0.3s ease;
-    }
-    .link:hover {
-      color: $accent_color;
-    }
-  }
+}
+.list_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 42px;
+  width: 32px;
+  background-color: white;
+  border: 1.5px solid $accent_gradient;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.4rem;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.list_text {
+  cursor: pointer;
+  background-color: transparent;
+  @include text_styling(12px, 700, 15.67px, $accent_medium);
+  padding: 0.5rem;
+  border: 0.65px;
+  text-align: center;
 }

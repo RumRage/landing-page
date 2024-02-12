@@ -1,57 +1,43 @@
 import { useState } from "react";
-import { Link } from "@/navigation";
+import { usePathname, useRouter, locales } from "@/navigation";
+import { useLocale } from "next-intl";
+import useCloseDropdown from "@/hooks/useCloseDropdown";
+
 import styles from "./styles.module.scss";
 
 const LangDrop = () => {
-  const [changeLangDropdown, setChangeLangDropdown] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("es");
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useCloseDropdown(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
 
-  const toggleLanguage = () => {
-    setChangeLangDropdown(!changeLangDropdown);
-  };
-
-  const changeLanguage = (lang: string) => {
-    setCurrentLanguage(lang);
-    setChangeLangDropdown(false);
-  };
   return (
-    <div onClick={toggleLanguage} className={styles.dropdown}>
-      {currentLanguage === "es" ? (
-        <>
-          <Link href="/" className={styles.link}>
-            ES
-          </Link>
-          {changeLangDropdown && (
-            <div className={styles.dropdown_lang}>
-              <Link
-                href="/"
-                locale="en"
-                className={styles.link}
-                onClick={() => changeLanguage("en")}
-              >
-                EN
-              </Link>
-            </div>
-          )}
-        </>
-      ) : (
-        <>
-          <Link href="/" className={styles.link}>
-            EN
-          </Link>
-          {changeLangDropdown && (
-            <div className={styles.dropdown_lang}>
-              <Link
-                href="/"
-                locale="es"
-                className={styles.link}
-                onClick={() => changeLanguage("es")}
-              >
-                ES
-              </Link>
-            </div>
-          )}
-        </>
+    <div className={styles.dropdown} ref={ref}>
+      <p
+        className={styles.text}
+        onClick={() => setIsComponentVisible(!isComponentVisible)}
+      >
+        {locale.toUpperCase()}
+      </p>
+      {isComponentVisible && (
+        <ol>
+          <li className={styles.list_container}>
+            {locales
+              .filter((loc) => loc != locale)
+              .map((loc) => {
+                return (
+                  <button
+                    key={loc}
+                    className={styles.list_text}
+                    onClick={() => router.replace(pathname, { locale: loc })}
+                  >
+                    {loc.toUpperCase()}
+                  </button>
+                );
+              })}
+          </li>
+        </ol>
       )}
     </div>
   );
