@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { usePathname, useRouter, locales } from "@/navigation";
 import { useLocale } from "next-intl";
 import useCloseDropdown from "@/hooks/useCloseDropdown";

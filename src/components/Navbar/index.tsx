@@ -12,13 +12,11 @@ import { FaBars } from "react-icons/fa";
 //Images
 import logo from "@/../../public/icons/image 4.svg";
 import LangDrop from "../LangDrop";
+import useCloseDropdown from "@/hooks/useCloseDropdown";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useCloseDropdown(false);
 
   const t = useTranslations("Navbar");
 
@@ -45,9 +43,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.nav_group}>
-          <div onClick={toggleDropdown} className={styles.dropdown}>
+          <div
+            onClick={() => setIsComponentVisible(!isComponentVisible)}
+            className={styles.dropdown}
+            ref={ref}
+          >
             {t("item_one")} ▼
-            {dropdownOpen && (
+            {isComponentVisible && (
               <div className={styles.dropdown_content}>
                 <Link href="/">Chatbots</Link>
                 <Link href="/">Agents</Link>
