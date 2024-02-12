@@ -34,3 +34,16 @@ $text_xl: 2rem;
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin dropdown {
+  cursor: pointer;
+  margin-right: 2.5rem;
+  font-weight: 500;
+  font-size: 16px;
+  color: $primary_color;
+  position: relative;
+
+  &:hover {
+    color: $accent_color;
+  }
+}

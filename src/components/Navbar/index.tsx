@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Link as CustomLink } from "@/navigation";
+
 // INTL
 import { useTranslations } from "next-intl";
 //Styles
@@ -11,24 +11,13 @@ import styles from "./styles.module.scss";
 import { FaBars } from "react-icons/fa";
 //Images
 import logo from "@/../../public/icons/image 4.svg";
+import LangDrop from "../LangDrop";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [changeLangDropdown, setChangeLangDropdown] = useState(false);
-
-  const [currentLanguage, setCurrentLanguage] = useState("es");
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
-  };
-
-  const toggleLanguage = () => {
-    setChangeLangDropdown(!changeLangDropdown);
-  };
-
-  const changeLanguage = (lang: string) => {
-    setCurrentLanguage(lang);
-    setChangeLangDropdown(false);
   };
 
   const t = useTranslations("Navbar");
@@ -75,45 +64,7 @@ const Navbar = () => {
           <button className={styles.button_notimation}>
             Notimation Entreprice
           </button>
-          <div onClick={toggleLanguage} className={styles.dropdown}>
-            {currentLanguage === "es" ? (
-              <>
-                <Link href="/" className={styles.link}>
-                  ES
-                </Link>
-                {changeLangDropdown && (
-                  <div className={styles.dropdown_lang}>
-                    <CustomLink
-                      href="/"
-                      locale="en"
-                      className={styles.link}
-                      onClick={() => changeLanguage("en")}
-                    >
-                      EN
-                    </CustomLink>
-                  </div>
-                )}
-              </>
-            ) : (
-              <>
-                <Link href="/" className={styles.link}>
-                  EN
-                </Link>
-                {changeLangDropdown && (
-                  <div className={styles.dropdown_lang}>
-                    <CustomLink
-                      href="/"
-                      locale="es"
-                      className={styles.link}
-                      onClick={() => changeLanguage("es")}
-                    >
-                      ES
-                    </CustomLink>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+          <LangDrop />
         </div>
       </div>
     </nav>
