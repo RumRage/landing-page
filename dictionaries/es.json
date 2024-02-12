@@ -1,17 +1,15 @@
 {
   "Home": {
-    "title": "Comunicación inteligente",
-    "subtitle": "Lleva la comunicación con tus clientes al siguiente nivel",
+    "home_title": "Comunicación inteligente",
+    "home_subtitle": "Lleva la comunicación con tus clientes al siguiente nivel",
     "subtitle_bold": "todo-en-uno",
-    "list_one": "Crea campañas de alto impacto",
-    "list_two": "Gestiona las consultas omnicanal",
-    "list_three": "Potencia tus chatbots corporativos.",
+    "home_list_one": "Crea campañas de alto impacto",
+    "home_list_two": "Gestiona las consultas omnicanal",
+    "home_list_three": "Potencia tus chatbots corporativos.",
     "placeholder_search": "Ingresa tu email o teléfono",
     "search_button": "Quiero que me contacten",
     "stat_one": "Campañas Enviadas",
-    "stat_two": "Respuestas Instantáneas"
-  },
-  "Work": {
+    "stat_two": "Respuestas Instantáneas",
     "title": "Funcionamiento",
     "subtitle": "Envío de mensaje por Whatsapp, SMS o correo con enlace único que muestra una vista previa y dirige a una app web personalizada para cada usuario y empresa",
     "list_one": "Envío individualizado de mensajes y enlaces",

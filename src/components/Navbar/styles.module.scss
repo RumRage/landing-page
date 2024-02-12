@@ -1,6 +1,5 @@
 @import "../../styles/theme.scss";
 
-//component navbar
 .navbar {
   padding: 1rem;
   background: $main_gradient;
@@ -13,8 +12,37 @@
   .desktop_navbar {
     display: none;
   }
+}
 
-  @media only screen and (min-width: 768px) {
+.logo {
+  top: 39px;
+  left: 17px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  top: 39px;
+}
+
+.menuIcon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: $accent_color;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+  .navbar {
     .mobile_navbar {
       display: none;
     }
@@ -34,11 +62,9 @@
     }
 
     .nav_group a {
+      @include text_styling(16px, 500, 24px, $primary_color);
       margin-right: 2.5rem;
       margin-left: 2rem;
-      font-weight: 500;
-      font-size: 16px;
-      color: $primary_color;
       text-decoration: none;
       transition: color 0.3s ease;
       &:hover {
@@ -46,16 +72,7 @@
       }
     }
     .dropdown {
-      cursor: pointer;
-      margin-right: 2.5rem;
-      font-weight: 500;
-      font-size: 16px;
-      color: $primary_color;
-      position: relative;
-
-      &:hover {
-        color: $accent_color;
-      }
+      @include dropdown;
     }
 
     .dropdown_content {
@@ -83,42 +100,14 @@
         }
       }
     }
-    .dropdown_lang {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      max-width: 100%;
-      background-color: white;
-      border: 3px solid $accent_gradient;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 0.4rem;
-      z-index: 1;
-      margin-top: 1rem;
-
-      .link {
-        color: $accent_medium;
-        text-decoration: none;
-        margin: 0.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .link:hover {
-        color: $accent_color;
-      }
-    }
-
     .nav_about {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
       a {
+        @include text_styling(16px, 500, 24px, $primary-color);
         margin-right: 2.5rem;
-        font-weight: 500;
-        font-size: 16px;
-        color: $primary_color;
         transition: color 0.3s ease;
         &:hover {
           color: $accent_color;
@@ -126,16 +115,15 @@
       }
 
       .button_notimation {
+        @include text_styling(16px, 500, 24px, $primary-color);
+        width: 196px;
+        height: 45px;
         margin-right: 1.5rem;
         cursor: pointer;
         background-color: $search-color;
-        color: $primary-color;
-        padding: 0.9rem 0.4rem;
         border: none;
         border-radius: 8px;
         white-space: nowrap;
-        font-weight: bold;
-
         transition: color 0.3s ease;
         &:hover {
           opacity: 90%;
@@ -143,16 +131,14 @@
       }
 
       .button_languaje {
+        @include text_styling(16px, 400, 24px, $primary-color);
         margin-right: 1rem;
         cursor: pointer;
         background-color: transparent;
-        color: $primary-color;
         padding: 0.9rem 0.4rem;
         border: none;
         border-radius: 8px;
         white-space: nowrap;
-        font-weight: bold;
-
         transition: color 0.3s ease;
         &:hover {
           color: $accent_color;
@@ -160,29 +146,4 @@
       }
     }
   }
-}
-
-.logo {
-  position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.menuButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  background-color: white;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.menuIcon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  padding: 0.5rem;
-  color: $accent_color;
 }

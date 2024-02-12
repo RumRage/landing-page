@@ -6,6 +6,8 @@
   @include flex_container(row, center, center);
   margin-top: 3rem;
   padding: 0.5rem;
+  width: 344px;
+  height: 46px;
 
   input {
     font-size: 12px;
@@ -13,25 +15,31 @@
     font-weight: 400;
     border: none;
     border-radius: 5px;
-    flex: 1;
-    padding: 0.8rem 0;
+    padding: 0.8rem 0.5rem;
   }
 
   button {
     cursor: pointer;
     background-color: $search-color;
-    color: $primary-color;
+    @include text_styling(12px, 700, 15.67px, $primary-color);
     top: 579.54px;
     left: 181.5px;
     padding: 10.44px;
     border: 0.65px;
+    text-align: right;
     border-radius: 6.53px;
     white-space: nowrap;
     font-weight: bold;
-    gap: 8.49px;
+    gap: 6.53px;
   }
+}
 
-  @media (min-width: 768px) {
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .search {
+    width: 488px;
+    height: 71px;
     gap: 13px;
     padding: 17px, 16px, 17px, 25px;
     input {
@@ -39,6 +47,7 @@
       height: 26px;
       font-size: 14px;
       font-weight: 400;
+      margin-right: 2rem;
     }
     button {
       top: 555px;

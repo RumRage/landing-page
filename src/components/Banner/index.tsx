@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
 
 const Banner = () => {
-  const t = useTranslations("Work");
+  const t = useTranslations("Home");
   return (
     <div className={styles.background}>
       <div className={styles.container}>

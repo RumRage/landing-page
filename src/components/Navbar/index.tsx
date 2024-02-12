@@ -1,32 +1,22 @@
 "use client";
-
 import { useState } from "react";
-
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Link as CustomLink } from "@/navigation";
+
+// INTL
+import { useTranslations } from "next-intl";
+//Styles
 import styles from "./styles.module.scss";
+//Icons
 import { FaBars } from "react-icons/fa";
+//Images
+import logo from "@/../../public/icons/image 4.svg";
+import LangDrop from "../LangDrop";
+import useCloseDropdown from "@/hooks/useCloseDropdown";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [changeLangDropdown, setChangeLangDropdown] = useState(false);
-
-  const [currentLanguage, setCurrentLanguage] = useState("es");
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const toggleLanguage = () => {
-    setChangeLangDropdown(!changeLangDropdown);
-  };
-
-  const changeLanguage = (lang: string) => {
-    setCurrentLanguage(lang);
-    setChangeLangDropdown(false);
-  };
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useCloseDropdown(false);
 
   const t = useTranslations("Navbar");
 
@@ -36,7 +26,7 @@ const Navbar = () => {
 
       <div className={styles.mobile_navbar}>
         <div className={styles.logo}>
-          <Image src="/icons/image 4.svg" alt="Logo" width={183} height={36} />
+          <Image src={logo} alt="Logo" width={172} height={34} />
         </div>
         <div>
           <button className={styles.menuButton}>
@@ -49,18 +39,17 @@ const Navbar = () => {
       <div className={styles.desktop_navbar}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image
-              src="/icons/image 4.svg"
-              alt="Logo"
-              width={183}
-              height={36}
-            />
+            <Image src={logo} alt="Logo" width={183} height={36} />
           </Link>
         </div>
         <div className={styles.nav_group}>
-          <div onClick={toggleDropdown} className={styles.dropdown}>
+          <div
+            onClick={() => setIsComponentVisible(!isComponentVisible)}
+            className={styles.dropdown}
+            ref={ref}
+          >
             {t("item_one")} ▼
-            {dropdownOpen && (
+            {isComponentVisible && (
               <div className={styles.dropdown_content}>
                 <Link href="/">Chatbots</Link>
                 <Link href="/">Agents</Link>
@@ -77,45 +66,7 @@ const Navbar = () => {
           <button className={styles.button_notimation}>
             Notimation Entreprice
           </button>
-          <div onClick={toggleLanguage} className={styles.dropdown}>
-            {currentLanguage === "es" ? (
-              <>
-                <Link href="/" className={styles.link}>
-                  ES
-                </Link>
-                {changeLangDropdown && (
-                  <div className={styles.dropdown_lang}>
-                    <CustomLink
-                      href="/"
-                      locale="en"
-                      className={styles.link}
-                      onClick={() => changeLanguage("en")}
-                    >
-                      EN
-                    </CustomLink>
-                  </div>
-                )}
-              </>
-            ) : (
-              <>
-                <Link href="/" className={styles.link}>
-                  EN
-                </Link>
-                {changeLangDropdown && (
-                  <div className={styles.dropdown_lang}>
-                    <CustomLink
-                      href="/"
-                      locale="es"
-                      className={styles.link}
-                      onClick={() => changeLanguage("es")}
-                    >
-                      ES
-                    </CustomLink>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+          <LangDrop />
         </div>
       </div>
     </nav>

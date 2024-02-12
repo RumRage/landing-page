@@ -1,37 +1,38 @@
 @import "../../styles/theme.scss";
 
 .section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  @include flex_container(row, flex-start, center);
   margin-top: 2rem;
+  width: 314.64px;
+  height: 41px;
 
-  .stat_one {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  .stat {
+    @include flex_container(row, center, center);
 
     h1 {
-      font-size: 27.42px;
-      font-weight: 500;
-      line-height: 40.47px;
+      @include text_styling(27.42px, 500, 40.47px, $primary-color);
     }
 
     p {
-      font-weight: 500;
+      @include text_styling(9.79px, 500, 13.06px, $primary-color);
       max-width: 20%;
       padding: 0.4rem;
-      @include text_styling(9.79px, 0, $primary_color);
     }
   }
+}
 
-  @media (min-width: 768px) {
-    .stat_one {
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .section {
+    width: auto;
+    height: 62px;
+    padding: 3rem 0;
+
+    .stat {
       h1 {
-        font-weight: 500;
         font-size: 42px;
+        font-weight: 500;
         line-height: 62px;
       }
 
