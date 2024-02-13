@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className={styles.nav_about}>
           <Link href="/">{t("agents")} </Link>
           <button className={styles.button_notimation}>
-            Notimation Entreprice
+            Notimation Entreprise
           </button>
           <LangDrop />
         </div>
