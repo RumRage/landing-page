@@ -10,7 +10,7 @@
 
   .section {
     color: $primary_color;
-    width: 100%;
+    max-width: 1200px;
     height: 100%;
 
     .text_container {
@@ -18,21 +18,18 @@
       .title {
         @include text_styling(24px, 600, 28.8px, $primary_color);
         letter-spacing: 1.31px;
-        padding-left: 0.5rem;
       }
 
       .subtitle {
         @include text_styling(15px, 400, 16.97px, $gray_light_color);
         margin: 1.6rem 0;
         max-width: 90%;
-        padding-left: 1rem;
         .black {
           font-weight: 700;
         }
       }
 
       .list {
-        padding-left: 0.5rem;
         ol {
           list-style-type: none;
           padding-top: 1rem;
