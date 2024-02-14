@@ -181,6 +181,7 @@
   .home {
     .first_section {
       min-height: 90vh;
+      padding: 0;
       .section {
         @include flex_container(row-reverse, space-between, center);
         max-width: 1200px;
@@ -191,6 +192,7 @@
         }
 
         .text_container {
+          padding-top: 0;
           max-width: 50%;
           height: 100%;
           @include flex_container(column, flex-start, flex-start);
