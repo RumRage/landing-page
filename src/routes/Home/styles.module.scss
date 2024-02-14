@@ -177,24 +177,25 @@
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) and (min-height: 720px) {
   .home {
     .first_section {
       min-height: 90vh;
+      padding: 0;
       .section {
-        @include flex_container(row-reverse, space-evenly, center);
-        max-width: 100%;
+        @include flex_container(row-reverse, space-between, center);
+        max-width: 1200px;
 
         .slider {
-          max-width: 50%;
+          max-width: 55%;
           height: 100%;
         }
 
         .text_container {
+          padding-top: 0;
           max-width: 50%;
           height: 100%;
           @include flex_container(column, flex-start, flex-start);
-          padding-left: 12rem;
 
           .title {
             letter-spacing: 2px;

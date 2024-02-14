@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 //Components
 import SearchButton from "@/components/SearchButton";
 import Slider from "@/components/Slider";
-import Stats from "@/components/Stats";
+import Stat from "@/components/Stat";
 import Banner from "@/components/Banner";
 
 //Images
@@ -44,7 +44,8 @@ export default function Home() {
             <div className={styles.info}>
               <SearchButton />
               <div className={styles.stats}>
-                <Stats />
+                <Stat number={+2943} title={t("stat_one")} />
+                <Stat number="+1M" title={t("stat_two")} />
               </div>
             </div>
           </div>
