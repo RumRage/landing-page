@@ -5,12 +5,10 @@ import { useTranslations } from "next-intl";
 const SearchButton = () => {
   const t = useTranslations("Home");
   return (
-    <div className={styles.search}>
-      <form>
-        <input type="email" placeholder={t("placeholder_search")} />
-        <button>{t("search_button")}</button>
-      </form>
-    </div>
+    <form className={styles.search}>
+      <input type="email" placeholder={t("placeholder_search")} />
+      <button>{t("search_button")}</button>
+    </form>
   );
 };
 
