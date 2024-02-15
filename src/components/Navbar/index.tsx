@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,16 +22,17 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       {/* MOBILE NAVBAR */}
-
       <div className={styles.mobile_navbar}>
-        <div className={styles.logo}>
-          <Image src={logo} alt="Logo" width={172} height={34} />
-        </div>
-        <div>
-          <button className={styles.menuButton}>
-            <FaBars className={styles.menuIcon} />
-          </button>
-        </div>
+        <Image
+          className={styles.logo}
+          src={logo}
+          alt="Logo"
+          width={172}
+          height={34}
+        />
+        <button className={styles.menuButton}>
+          <FaBars className={styles.menuIcon} />
+        </button>
       </div>
 
       {/* DESKTOP NAVBAR */}
