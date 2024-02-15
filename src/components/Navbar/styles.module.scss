@@ -46,7 +46,7 @@
 
     .desktop_navbar {
       @include flex_container(row, space-between, center);
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -131,6 +131,14 @@
           color: $accent_color;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar {
+    .desktop_navbar {
+      max-width: 1400px;
     }
   }
 }
