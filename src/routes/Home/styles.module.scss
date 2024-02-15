@@ -176,8 +176,7 @@
 }
 
 /* MEDIA QUERIES */
-
-@media only screen and (min-width: 1280px) and (min-height: 720px) {
+@media only screen and (min-width: 768px) {
   .home {
     .first_section {
       min-height: 90vh;
