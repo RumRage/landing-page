@@ -197,20 +197,15 @@
           @include flex_container(column, flex-start, flex-start);
 
           .title {
-            letter-spacing: 2px;
-            font-size: 42px;
-            line-height: 50.4px;
-            font-weight: 600;
+            @include text_styling(42px, 600, 50.4px, $primary_color);
             max-width: 50%;
             padding-left: 0;
           }
 
           .subtitle {
-            font-size: 26px;
-            font-weight: 400;
+            @include text_styling(26px, 400, 26px, $gray_light_color);
             max-width: 65%;
             padding-left: 0;
-            line-height: 26px;
           }
 
           .list {
@@ -245,17 +240,12 @@
           gap: 2rem;
 
           .title_work {
-            font-size: 45px;
-            font-weight: 700;
-            line-height: 36.54px;
+            @include text_styling(45px, 700, 36.53px, transparent);
             margin-top: -2rem;
           }
 
           .subtitle {
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 30.86px;
-            letter-spacing: 0.24px;
+            @include text_styling(22px, 400, 30.86px, $secondary_color);
             width: 65%;
           }
           .list {
