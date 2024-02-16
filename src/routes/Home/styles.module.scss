@@ -31,12 +31,11 @@
         }
       }
 
-      .list {
+      ol {
+        list-style-type: none;
+        padding-top: 1rem;
         padding-left: 0.5rem;
-        ol {
-          list-style-type: none;
-          padding-top: 1rem;
-        }
+
         li {
           @include text_styling(12px, 500, 16.97px, $primary_color);
           letter-spacing: 0.13px;
@@ -208,17 +207,16 @@
             padding-left: 0;
           }
 
-          .list {
-            ol {
-              padding-top: 2rem;
-              padding-bottom: 4rem;
-              li {
-                line-height: 26px;
-                font-size: 20px;
-                letter-spacing: 0.2px;
-              }
+          ol {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            li {
+              line-height: 26px;
+              font-size: 20px;
+              letter-spacing: 0.2px;
             }
           }
+
           .stats {
             display: flex;
             justify-content: space-evenly;

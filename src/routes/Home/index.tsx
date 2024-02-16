@@ -60,13 +60,11 @@ export default function Home() {
             <div className={styles.text_section}>
               <h1 className={styles.title_work}>{t("title")}</h1>
               <p className={styles.subtitle}>{t("subtitle")}</p>
-              <div className={styles.list}>
-                <ol>
-                  <li>&gt; {t("list_one")}</li>
-                  <li>&gt; {t("list_two")}</li>
-                  <li>&gt; {t("list_three")}</li>
-                </ol>
-              </div>
+              <ul className={styles.list}>
+                <li>&gt; {t("list_one")}</li>
+                <li>&gt; {t("list_two")}</li>
+                <li>&gt; {t("list_three")}</li>
+              </ul>
             </div>
             {/* AGENTS */}
             <div className={styles.agents_section}>
