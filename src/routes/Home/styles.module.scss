@@ -187,7 +187,7 @@
   .home {
     .first_section {
       min-height: 90vh;
-      padding: 0;
+
       .section {
         @include flex_container(row-reverse, space-between, center);
         max-width: 1200px;
@@ -201,7 +201,7 @@
           padding-top: 0;
           max-width: 50%;
           height: 100%;
-          @include flex_container(column, flex-start, flex-start);
+          gap: 25px;
 
           .title {
             @include text_styling(42px, 600, 50.4px, $primary_color);
@@ -211,13 +211,12 @@
 
           .subtitle {
             @include text_styling(26px, 400, 26px, $gray_light_color);
-            max-width: 65%;
+            max-width: 85%;
             padding-left: 0;
           }
 
           ul {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
+            padding-top: 20px;
             li {
               line-height: 26px;
               font-size: 20px;
@@ -225,10 +224,12 @@
             }
           }
 
-          .stats {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+          .info {
+            padding-top: 50px;
+
+            .stats {
+              @include flex_container(row, space-evenly, center);
+            }
           }
         }
       }
