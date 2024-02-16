@@ -31,7 +31,7 @@
         }
       }
 
-      ol {
+      ul {
         list-style-type: none;
         padding-top: 1rem;
         padding-left: 0.5rem;
@@ -85,18 +85,17 @@
           @include text_styling(12px, 400, 18px, $secondary_color);
           letter-spacing: 0.24px;
         }
-        .list {
-          ol {
-            list-style-type: none;
 
-            li {
-              padding-bottom: 1rem;
-              background-image: $list_gradient;
-              -webkit-background-clip: text;
-              background-clip: text;
-              @include text_styling(14px, 700, 30px, transparent);
-              letter-spacing: 0.28px;
-            }
+        ul {
+          list-style-type: none;
+
+          li {
+            padding-bottom: 1rem;
+            background-image: $list_gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            @include text_styling(14px, 700, 30px, transparent);
+            letter-spacing: 0.28px;
           }
         }
       }
@@ -207,7 +206,7 @@
             padding-left: 0;
           }
 
-          ol {
+          ul {
             padding-top: 2rem;
             padding-bottom: 4rem;
             li {
@@ -246,11 +245,10 @@
             @include text_styling(22px, 400, 30.86px, $secondary_color);
             width: 65%;
           }
-          .list {
-            ol {
-              li {
-                @include text_styling(22px, 700, 36.54px, transparent);
-              }
+
+          ul {
+            li {
+              @include text_styling(22px, 700, 36.54px, transparent);
             }
           }
         }
