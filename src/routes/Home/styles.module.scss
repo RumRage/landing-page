@@ -5,16 +5,19 @@
   background: $main_gradient no-repeat fixed;
   width: 100%;
   min-height: 85vh;
-  padding: 0 2rem;
-  gap: 2;
+  padding: 0 25px;
 
   .section {
+    @include flex_container(column, space-between, flex-start);
+    gap: 30px;
     color: $primary_color;
     width: 100%;
     height: 100%;
 
     .text_container {
-      padding-top: 2rem;
+      @include flex_container(column, space-between, flex-start);
+      gap: 30px;
+
       .title {
         @include text_styling(24px, 600, 28.8px, $primary_color);
         letter-spacing: 1.31px;
@@ -23,7 +26,6 @@
 
       .subtitle {
         @include text_styling(15px, 400, 16.97px, $gray_light_color);
-        margin: 1.6rem 0;
         max-width: 90%;
         padding-left: 1rem;
         .black {
@@ -31,20 +33,26 @@
         }
       }
 
-      .list {
+      ul {
+        list-style-type: none;
         padding-left: 0.5rem;
-        ol {
-          list-style-type: none;
-          padding-top: 1rem;
-        }
+
         li {
           @include text_styling(12px, 500, 16.97px, $primary_color);
           letter-spacing: 0.13px;
         }
       }
-    }
-    .stats {
-      @include flex_container(row, space-between, center);
+      .info {
+        @include flex_container(column, space-between, flex-start);
+        gap: 30px;
+        padding-top: 20px;
+
+        .stats {
+          @include flex_container(row, space-between, center);
+          gap: 5rem;
+          padding-left: 20px;
+        }
+      }
     }
   }
 }
@@ -86,18 +94,17 @@
           @include text_styling(12px, 400, 18px, $secondary_color);
           letter-spacing: 0.24px;
         }
-        .list {
-          ol {
-            list-style-type: none;
 
-            li {
-              padding-bottom: 1rem;
-              background-image: $list_gradient;
-              -webkit-background-clip: text;
-              background-clip: text;
-              @include text_styling(14px, 700, 30px, transparent);
-              letter-spacing: 0.28px;
-            }
+        ul {
+          list-style-type: none;
+
+          li {
+            padding-bottom: 1rem;
+            background-image: $list_gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            @include text_styling(14px, 700, 30px, transparent);
+            letter-spacing: 0.28px;
           }
         }
       }
@@ -180,7 +187,7 @@
   .home {
     .first_section {
       min-height: 90vh;
-      padding: 0;
+
       .section {
         @include flex_container(row-reverse, space-between, center);
         max-width: 1200px;
@@ -194,40 +201,35 @@
           padding-top: 0;
           max-width: 50%;
           height: 100%;
-          @include flex_container(column, flex-start, flex-start);
+          gap: 25px;
 
           .title {
-            letter-spacing: 2px;
-            font-size: 42px;
-            line-height: 50.4px;
-            font-weight: 600;
+            @include text_styling(42px, 600, 50.4px, $primary_color);
             max-width: 50%;
             padding-left: 0;
           }
 
           .subtitle {
-            font-size: 26px;
-            font-weight: 400;
-            max-width: 65%;
+            @include text_styling(26px, 400, 26px, $gray_light_color);
+            max-width: 85%;
             padding-left: 0;
-            line-height: 26px;
           }
 
-          .list {
-            ol {
-              padding-top: 2rem;
-              padding-bottom: 4rem;
-              li {
-                line-height: 26px;
-                font-size: 20px;
-                letter-spacing: 0.2px;
-              }
+          ul {
+            padding-top: 20px;
+            li {
+              line-height: 26px;
+              font-size: 20px;
+              letter-spacing: 0.2px;
             }
           }
-          .stats {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+
+          .info {
+            padding-top: 50px;
+
+            .stats {
+              @include flex_container(row, space-evenly, center);
+            }
           }
         }
       }
@@ -245,24 +247,18 @@
           gap: 2rem;
 
           .title_work {
-            font-size: 45px;
-            font-weight: 700;
-            line-height: 36.54px;
+            @include text_styling(45px, 700, 36.53px, transparent);
             margin-top: -2rem;
           }
 
           .subtitle {
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 30.86px;
-            letter-spacing: 0.24px;
+            @include text_styling(22px, 400, 30.86px, $secondary_color);
             width: 65%;
           }
-          .list {
-            ol {
-              li {
-                @include text_styling(22px, 700, 36.54px, transparent);
-              }
+
+          ul {
+            li {
+              @include text_styling(22px, 700, 36.54px, transparent);
             }
           }
         }

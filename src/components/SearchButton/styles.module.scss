@@ -3,10 +3,9 @@
 .search {
   background-color: $primary-color;
   border-radius: 12px;
-  @include flex_container(row, center, center);
-  margin-top: 3rem;
-  padding: 0.5rem;
-  width: 344px;
+  @include flex_container(row, space-between, center);
+  gap: 2px;
+  width: 360px;
   height: 46px;
 
   input {
@@ -15,22 +14,19 @@
     font-weight: 400;
     border: none;
     border-radius: 5px;
-    padding: 0.8rem 0.5rem;
+    padding: 0 0.5rem;
   }
 
   button {
     cursor: pointer;
     background-color: $search-color;
     @include text_styling(12px, 700, 15.67px, $primary-color);
-    top: 579.54px;
-    left: 181.5px;
-    padding: 10.44px;
+    padding: 10px;
+    margin-right: 5px;
     border: 0.65px;
-    text-align: right;
     border-radius: 6.53px;
     white-space: nowrap;
     font-weight: bold;
-    gap: 6.53px;
   }
 }
 
@@ -38,23 +34,19 @@
 
 @media (min-width: 768px) {
   .search {
-    width: 488px;
+    width: 510px;
     height: 71px;
-    gap: 13px;
     padding: 17px, 16px, 17px, 25px;
     input {
-      width: 227px;
-      height: 26px;
+      width: 280px;
+      height: 46px;
       font-size: 14px;
       font-weight: 400;
-      margin-right: 2rem;
     }
     button {
-      top: 555px;
-      left: 388.55px;
+      min-width: 200px;
       border-radius: 10px;
       padding: 16px;
-      gap: 10px;
       font-size: 14px;
       line-height: 24px;
       align-items: right;

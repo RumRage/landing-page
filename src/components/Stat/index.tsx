@@ -8,11 +8,9 @@ interface StatProps {
 
 const Stat: React.FC<StatProps> = ({ number, title }) => {
   return (
-    <div className={styles.section}>
-      <div className={styles.stat}>
-        <h1>{number}</h1>
-        <p>{title} </p>
-      </div>
+    <div className={styles.stat}>
+      <h1>{number}</h1>
+      <p>{title} </p>
     </div>
   );
 };
